@@ -12,10 +12,19 @@ header .intro-heading {
   }
 }
 
-/* bring hero text slightly higher */
+/* Reset hero height and lift text slightly */
 header .intro-text {
-  padding: 60px 0; /* was ~100px */
+  padding: 100px 0;           /* restore default height for balance */
+  transform: translateY(-40px); /* move the text & button upward */
 }
+
+/* Adjust only on small screens */
+@media (max-width: 576px){
+  header .intro-text {
+    transform: translateY(-20px);
+  }
+}
+
 
 /* fine-tune for mobile */
 @media (max-width: 576px) {
