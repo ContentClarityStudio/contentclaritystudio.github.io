@@ -30,3 +30,17 @@ text-transform: none;
     font-size: 1.4rem;
   }
 }
+
+/* Match navbar Book button to hero button hover */
+.navbar-nav > li > .btn.btn-primary {
+  background-color: #fed136;  /* base gold (same as hero normal) */
+  border-color: #fed136;
+  color: #fff;
+}
+
+.navbar-nav > li > .btn.btn-primary:hover,
+.navbar-nav > li > .btn.btn-primary:focus {
+  background-color: #fec503;  /* exact hover color from hero button */
+  border-color: #fec503;
+  color: #fff;
+}
