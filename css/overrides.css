@@ -31,32 +31,40 @@ text-transform: none;
   }
 }
 
-/* Match navbar Book button to hero button hover */
-.navbar-nav > li > .btn.btn-primary {
-  background-color: #fed136;  /* base gold (same as hero normal) */
+/* Keep default gold ONLY for non-CTA primary buttons in the navbar */
+.navbar-nav > li > .btn.btn-primary:not(.btn-cta) {
+  background-color: #fed136;
   border-color: #fed136;
   color: #fff;
 }
-
-.navbar-nav > li > .btn.btn-primary:hover,
-.navbar-nav > li > .btn.btn-primary:focus {
-  background-color: #fec503;  /* exact hover color from hero button */
+.navbar-nav > li > .btn.btn-primary:not(.btn-cta):hover,
+.navbar-nav > li > .btn.btn-primary:not(.btn-cta):focus {
+  background-color: #fec503;
   border-color: #fec503;
   color: #fff;
 }
 
+
 /* --------------------------------------------------------- */
-/* Custom orange-gold CTA buttons (for both Book your audit buttons) */
-.btn-cta {
+/* Custom orange-gold CTA buttons (hero + navbar) */
+.btn.btn-primary.btn-cta {
   background-color: #ff9600;  /* your standout orange-gold */
   border-color: #ff9600;
   color: #fff;
   transition: all 0.2s ease-in-out;
 }
 
-.btn-cta:hover,
-.btn-cta:focus {
-  background-color: #e68600;  /* deeper orange for hover */
+.btn.btn-primary.btn-cta:hover,
+.btn.btn-primary.btn-cta:focus {
+  background-color: #e68600;  /* deeper orange on hover */
   border-color: #e68600;
   color: #fff;
 }
+
+/* Explicitly cover the navbar context (belt & braces) */
+.navbar-nav > li > .btn.btn-primary.btn-cta:hover,
+.navbar-nav > li > .btn.btn-primary.btn-cta:focus {
+  background-color: #e68600;
+  border-color: #e68600;
+}
+
