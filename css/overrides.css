@@ -68,3 +68,8 @@ text-transform: none;
   border-color: #e68600;
 }
 
+/* Make navbar Book CTA text match hero CTA (bold + consistent spacing) */
+.navbar-nav > li > .btn.btn-primary.btn-cta {
+  font-weight: 600;      /* same as hero button weight */
+  letter-spacing: 0.3px; /* optional: adds the same subtle spacing */
+}
