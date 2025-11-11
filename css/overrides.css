@@ -11,3 +11,19 @@ header .intro-heading {
     line-height: 1.2;
   }
 }
+
+/* Bigger and more confident subline under hero button */
+.hero-subtext {
+  margin-top: 15px;
+  font-size: 2rem;          /* roughly double */
+  font-weight: 500;
+  color: #fff;
+  opacity: 0.95;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 576px) {
+  .hero-subtext {
+    font-size: 1.4rem;
+  }
+}
