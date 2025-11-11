@@ -11,3 +11,15 @@ header .intro-heading {
     line-height: 1.2;
   }
 }
+
+/* bring hero text slightly higher */
+header .intro-text {
+  padding: 60px 0; /* was ~100px */
+}
+
+/* fine-tune for mobile */
+@media (max-width: 576px) {
+  header .intro-text {
+    padding: 40px 0;
+  }
+}
