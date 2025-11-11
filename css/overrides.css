@@ -1,0 +1,13 @@
+/* ---- Custom tweaks ---- */
+header .intro-heading {
+  text-transform: none !important;
+  line-height: 1.15;
+  max-width: 28ch;
+}
+
+@media (max-width:576px){
+  header .intro-heading {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
