@@ -19,6 +19,9 @@ header .intro-heading {
   font-weight: 500;
   color: #fff;
   opacity: 0.95;
+  letter-spacing: 0.5px;
+text-transform: none;
+
 }
 
 /* Adjust for smaller screens */
