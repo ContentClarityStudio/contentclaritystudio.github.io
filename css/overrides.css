@@ -73,3 +73,18 @@ text-transform: none;
   font-weight: 600;      /* same as hero button weight */
   letter-spacing: 0.3px; /* optional: adds the same subtle spacing */
 }
+/* Center the Book CTA vertically inside the desktop navbar */
+.navbar-nav > li > .btn.btn-primary.btn-cta {
+  font-weight: 600;       /* keep the bold match */
+  letter-spacing: 0.3px;  /* subtle spacing */
+  margin-top: 8px;        /* base offset */
+  margin-bottom: 8px;     /* equal bottom offset */
+}
+
+/* Adjust when the navbar collapses on small screens */
+@media (max-width: 767px) {
+  .navbar-nav > li > .btn.btn-primary.btn-cta {
+    margin-top: 10px;     /* keeps spacing when stacked */
+    margin-bottom: 10px;
+  }
+}
