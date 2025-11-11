@@ -44,3 +44,19 @@ text-transform: none;
   border-color: #fec503;
   color: #fff;
 }
+
+/* --------------------------------------------------------- */
+/* Custom orange-gold CTA buttons (for both Book your audit buttons) */
+.btn-cta {
+  background-color: #ff9600;  /* your standout orange-gold */
+  border-color: #ff9600;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  background-color: #e68600;  /* deeper orange for hover */
+  border-color: #e68600;
+  color: #fff;
+}
