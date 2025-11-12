@@ -118,11 +118,21 @@ header .intro-heading {
   margin: 0 auto 20px;
 }
 
-/* Supporting bridge line */
+/* --- Problem section bridge line styling --- */
 #problem .problem-bridge {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #555;
-  max-width: 55ch;
-  margin: 0 auto 22px;
+  font-size: 1.3rem;           /* bump up size for emphasis */
+  line-height: 1.5;
+  max-width: 48ch;             /* keep line length balanced */
+  margin: 20px auto 30px;      /* add breathing room */
+  color: #333;                 /* darker for clarity */
+  font-weight: 500;            /* makes it feel confident */
+  letter-spacing: 0.3px;       /* subtle polish */
 }
+
+@media (max-width: 576px) {
+  #problem .problem-bridge {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
