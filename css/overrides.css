@@ -20,15 +20,11 @@ header .intro-heading {
   color: #fff;
   opacity: 0.95;
   letter-spacing: 0.5px;
-text-transform: none;
-
+  text-transform: none;
 }
 
-/* Adjust for smaller screens */
 @media (max-width: 576px) {
-  .hero-subtext {
-    font-size: 1.4rem;
-  }
+  .hero-subtext { font-size: 1.4rem; }
 }
 
 /* Keep default gold ONLY for non-CTA primary buttons in the navbar */
@@ -44,47 +40,37 @@ text-transform: none;
   color: #fff;
 }
 
-
 /* --------------------------------------------------------- */
-/* Custom orange-gold CTA buttons (hero + navbar) */
+/* UPDATED CTA buttons (hero + navbar): base #e66a00, hover #cc5f00 */
 .btn.btn-primary.btn-cta {
-  background-color: #ff9600;  /* your standout orange-gold */
-  border-color: #ff9600;
+  background-color: #e66a00;   /* base */
+  border-color: #e66a00;
   color: #fff;
+  font-weight: 700;             /* bold for “large text” AA */
+  font-size: 18px;              /* large text threshold */
+  letter-spacing: 0.3px;
   transition: all 0.2s ease-in-out;
 }
 
 .btn.btn-primary.btn-cta:hover,
 .btn.btn-primary.btn-cta:focus {
-  background-color: #e68600;  /* deeper orange on hover */
-  border-color: #e68600;
+  background-color: #cc5f00;   /* deeper, confident hover */
+  border-color: #cc5f00;
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
 }
 
-/* Explicitly cover the navbar context (belt & braces) */
-.navbar-nav > li > .btn.btn-primary.btn-cta:hover,
-.navbar-nav > li > .btn.btn-primary.btn-cta:focus {
-  background-color: #e68600;
-  border-color: #e68600;
-}
-
-/* Make navbar Book CTA text match hero CTA (bold + consistent spacing) */
+/* Navbar alignment for CTA (applies only in navbar context) */
 .navbar-nav > li > .btn.btn-primary.btn-cta {
-  font-weight: 600;      /* same as hero button weight */
-  letter-spacing: 0.3px; /* optional: adds the same subtle spacing */
-}
-/* Center the Book CTA vertically inside the desktop navbar */
-.navbar-nav > li > .btn.btn-primary.btn-cta {
-  font-weight: 600;       /* keep the bold match */
-  letter-spacing: 0.3px;  /* subtle spacing */
-  margin-top: 8px;        /* base offset */
-  margin-bottom: 8px;     /* equal bottom offset */
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
-/* Adjust when the navbar collapses on small screens */
 @media (max-width: 767px) {
   .navbar-nav > li > .btn.btn-primary.btn-cta {
-    margin-top: 10px;     /* keeps spacing when stacked */
+    margin-top: 10px;
     margin-bottom: 10px;
   }
 }
+
