@@ -1,9 +1,9 @@
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <!-- Brand + hamburger -->
     <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-label="Toggle navigation">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -17,11 +17,14 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a class="page-scroll" href="#problem">The Struggle</a></li>
         <li><a class="page-scroll" href="#plan">The Plan</a></li>
-        <li>
-        <a href="#contact" class="page-scroll btn btn-primary btn-cta">
-          Book your audit today
-        </a>
+
+        <!-- CTA lives inside the same <ul>; class used for spacing/alignment -->
+        <li class="nav-cta">
+          <a href="#contact" class="page-scroll btn btn-primary btn-cta">
+            Book your audit today
+          </a>
         </li>
+
         <!--
         <li><a class="page-scroll" href="#portfolio">Portfolio</a></li>
         <li><a class="page-scroll" href="#about">About</a></li>
@@ -31,21 +34,5 @@
     </div>
   </div>
 </nav>
+<!-- /Navigation -->
 
-<!-- Header -->
-<header>
-  <div class="container">
-    <div class="intro-text">
-      <div class="intro-lead-in">Clarity for your content strategy.</div>
-      <div class="intro-heading" style="text-transform:none; line-height:1.15; max-width:28ch;">
-        A simple plan<br>
-        so every post moves your business forward.
-      </div>
-
-      <a href="#contact" class="page-scroll btn btn-xl btn-primary btn-cta">
-        Book your audit today
-      </a>
-      <p class="hero-subtext">€100 • Clarity creates confidence.</p>
-    </div>
-  </div>
-</header>
