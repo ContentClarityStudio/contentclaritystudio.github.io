@@ -144,21 +144,35 @@ header .intro-heading {
 }
 
 
-/* Make CTA button same size as other nav buttons */
-.navbar-nav > li > .btn.btn-cta {
-  padding: 10px 20px !important; /* match size of blue buttons */
-  font-size: 0.9rem !important;  /* same font size as links */
-  line-height: 1.4 !important;
-  border-radius: 3px;            /* optional: same corner roundness */
-  background-color: #e66a00;
+/* CTA buttons (hero + navbar): base #e66a00, hover #cc5f00 */
+.btn.btn-primary.btn-cta {
+  background-color: #e66a00;   /* base orange */
   border-color: #e66a00;
   color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease-in-out;
 }
 
-/* Keep hover consistent but subtle */
-.navbar-nav > li > .btn.btn-cta:hover,
-.navbar-nav > li > .btn.btn-cta:focus {
+/* Hover effect for both hero + navbar CTAs */
+.btn.btn-primary.btn-cta:hover,
+.btn.btn-primary.btn-cta:focus {
   background-color: #cc5f00;
   border-color: #cc5f00;
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
 }
+
+/* Adjust navbar CTA spacing (not sizing) */
+.navbar-nav > li > .btn.btn-primary.btn-cta {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+@media (max-width: 767px) {
+  .navbar-nav > li > .btn.btn-primary.btn-cta {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
