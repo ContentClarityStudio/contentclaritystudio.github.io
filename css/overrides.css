@@ -143,18 +143,3 @@ header .intro-heading {
   .btn.btn-secondary{ padding:10px 22px; font-size:.95rem; }
 }
 
-
-/* Align CTA button vertically with text links */
-.navbar-nav > li > .btn.btn-cta {
-  padding: 8px 16px;          /* slightly smaller height */
-  font-size: 0.95rem;         /* closer to link size */
-  line-height: 1.2;           /* keeps vertical rhythm */
-  margin-top: 4px;            /* centers with link text */
-  margin-bottom: 4px;
-}
-
-/* Ensure consistent height for nav links */
-.navbar-nav > li > a.page-scroll {
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
