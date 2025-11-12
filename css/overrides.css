@@ -142,3 +142,36 @@ header .intro-heading {
   content: "";
 }
 
+/* Secondary calm button (problem section + anywhere else) */
+.btn.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #5b8fa9;   /* your blue accent */
+  color: #5b8fa9;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 12px 26px;          /* smaller than primary for lighter feel */
+  font-size: 0.95rem;          /* a bit lighter than main CTAs */
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus {
+  background-color: #5b8fa9;
+  color: #fff;
+}
+
+/* Optional: give the button a touch more space above/below in the problem section */
+#problem .btn.btn-secondary {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* Mobile tweak */
+@media (max-width:576px){
+  .btn.btn-secondary {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+  }
+}
+
