@@ -60,8 +60,9 @@ header .intro-heading {
 .navbar-nav > li > .btn.btn-cta {
   margin-top: 8px;
   margin-bottom: 8px;
-  padding: 10px 18px;   /* tidier next to text links */
-  font-size: 1rem;      /* smaller than hero CTA */
+  margin-left: 20px;   /* 👈 this creates spacing between it and the links */
+  padding: 10px 18px;
+  font-size: 1rem;
 }
 @media (max-width:767px){
   .navbar-nav > li > .btn.btn-cta {
