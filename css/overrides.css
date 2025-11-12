@@ -37,13 +37,13 @@ header .intro-heading {
 
 /* ---------------------------------------------------------
    CTA buttons (hero + navbar): base/hover colors
+   (single, de-duplicated definition)
 --------------------------------------------------------- */
 .btn.btn-primary.btn-cta {
   background-color: #e66a00;
   border-color: #e66a00;
   color: #fff;
-  font-weight: 700;     /* strong, passes AA as large text */
-  font-size: 18px;      /* keeps hero CTA assertive */
+  font-weight: 700;
   letter-spacing: 0.3px;
   transition: all .2s ease-in-out;
 }
@@ -57,16 +57,19 @@ header .intro-heading {
 }
 
 /* ---------------- Navbar spacing/alignment ---------------- */
+
 /* Even spacing between text links (desktop) */
 .navbar-nav > li { margin: 0 12px; }
 .navbar-nav > li:first-child { margin-left: 0; }
 
-/* Extra gap before the CTA; size the button neatly in the bar */
-.navbar-nav > li.nav-cta { margin-left: 20px; }
+/* Make the navbar CTA the SAME HEIGHT as the tabs */
 .navbar-nav > li.nav-cta > a.btn.btn-cta {
-  padding: 10px 18px;
-  font-size: 1rem;
-  margin: 8px 0;   /* vertical centering in the bar */
+  /* Tabs in Bootstrap nav are ~50px tall: padding 15/15 + line-height 20 */
+  padding: 15px 18px;     /* match vertical padding to tabs */
+  line-height: 20px;      /* aligns text baseline like tabs */
+  font-size: 14px;        /* same visual scale as nav links */
+  margin: 0;              /* remove vertical margins so heights match exactly */
+  border-radius: 3px;     /* match tab radius */
 }
 
 /* Collapse tweaks (mobile) */
@@ -74,7 +77,8 @@ header .intro-heading {
   .navbar-nav > li { margin: 0; }
   .navbar-nav > li.nav-cta > a.btn.btn-cta {
     display: block;
-    margin: 10px 0;
+    margin: 10px 0;      /* breathing room when stacked */
+    padding: 12px 18px;  /* slightly smaller in the stack */
   }
 }
 
@@ -110,7 +114,7 @@ header .intro-heading {
   font-size:1.3rem;
   line-height:1.5;
   max-width:48ch;
-  margin:20px auto 30px;  /* includes bottom spacing to next section */
+  margin:20px auto 30px;
   color:#444;
   font-weight:500;
   letter-spacing:.3px;
@@ -141,38 +145,5 @@ header .intro-heading {
 #problem .btn.btn-secondary{ margin-top:8px; margin-bottom:8px; }
 @media (max-width:576px){
   .btn.btn-secondary{ padding:10px 22px; font-size:.95rem; }
-}
-
-
-/* CTA buttons (hero + navbar): base #e66a00, hover #cc5f00 */
-.btn.btn-primary.btn-cta {
-  background-color: #e66a00;   /* base orange */
-  border-color: #e66a00;
-  color: #fff;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  transition: all 0.2s ease-in-out;
-}
-
-/* Hover effect for both hero + navbar CTAs */
-.btn.btn-primary.btn-cta:hover,
-.btn.btn-primary.btn-cta:focus {
-  background-color: #cc5f00;
-  border-color: #cc5f00;
-  color: #fff;
-  transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-}
-
-/* Adjust navbar CTA spacing (not sizing) */
-.navbar-nav > li > .btn.btn-primary.btn-cta {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-@media (max-width: 767px) {
-  .navbar-nav > li > .btn.btn-primary.btn-cta {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
 }
 
