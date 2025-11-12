@@ -179,16 +179,15 @@ header .intro-heading {
   margin-bottom: 30px; /* adds nice space before next section */
 }
 
-/* Keep CTA styled and aligned */
-.navbar-nav > li > .btn.nav-cta {
+/* Keep CTA styled and aligned (navbar context) */
+.navbar-nav > li > .btn.btn-cta {
   font-weight: 600;
   letter-spacing: 0.3px;
 }
-
-/* Stack nicely when collapsed */
 @media (max-width: 767px) {
-  .navbar-nav > li > .btn.nav-cta {
+  .navbar-nav > li > .btn.btn-cta {
     margin: 10px auto;
     display: block;
   }
 }
+
