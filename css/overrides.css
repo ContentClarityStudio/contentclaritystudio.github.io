@@ -178,3 +178,17 @@ header .intro-heading {
 #problem .problem-bridge {
   margin-bottom: 30px; /* adds nice space before next section */
 }
+
+/* Keep CTA styled and aligned */
+.navbar-nav > li > .btn.nav-cta {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Stack nicely when collapsed */
+@media (max-width: 767px) {
+  .navbar-nav > li > .btn.nav-cta {
+    margin: 10px auto;
+    display: block;
+  }
+}
