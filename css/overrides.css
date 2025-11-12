@@ -136,3 +136,9 @@ header .intro-heading {
   }
 }
 
+#problem .problem-bridge br {
+  margin-bottom: 6px;
+  display: block;
+  content: "";
+}
+
