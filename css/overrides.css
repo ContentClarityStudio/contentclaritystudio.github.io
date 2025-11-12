@@ -124,7 +124,7 @@ header .intro-heading {
   line-height: 1.5;
   max-width: 48ch;             /* keep line length balanced */
   margin: 20px auto 30px;      /* add breathing room */
-  color: #333;                 /* darker for clarity */
+  color: #444;                 /* darker for clarity */
   font-weight: 500;            /* makes it feel confident */
   letter-spacing: 0.3px;       /* subtle polish */
 }
