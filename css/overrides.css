@@ -74,3 +74,20 @@ header .intro-heading {
   }
 }
 
+/* Make just the brand/title white (both normal + scrolled states) */
+.navbar-default .navbar-brand {
+  color: #ffffff !important;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #e66a00 !important;   /* optional: on-brand hover */
+}
+
+/* When Agency theme adds .navbar-shrink on scroll, keep it white too */
+.navbar-default.navbar-shrink .navbar-brand {
+  color: #ffffff !important;
+}
+.navbar-default.navbar-shrink .navbar-brand:hover,
+.navbar-default.navbar-shrink .navbar-brand:focus {
+  color: #e66a00 !important;
+}
