@@ -143,3 +143,22 @@ header .intro-heading {
   .btn.btn-secondary{ padding:10px 22px; font-size:.95rem; }
 }
 
+
+/* Make CTA button same size as other nav buttons */
+.navbar-nav > li > .btn.btn-cta {
+  padding: 10px 20px !important; /* match size of blue buttons */
+  font-size: 0.9rem !important;  /* same font size as links */
+  line-height: 1.4 !important;
+  border-radius: 3px;            /* optional: same corner roundness */
+  background-color: #e66a00;
+  border-color: #e66a00;
+  color: #fff;
+}
+
+/* Keep hover consistent but subtle */
+.navbar-nav > li > .btn.btn-cta:hover,
+.navbar-nav > li > .btn.btn-cta:focus {
+  background-color: #cc5f00;
+  border-color: #cc5f00;
+  color: #fff;
+}
