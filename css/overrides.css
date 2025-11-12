@@ -1,33 +1,28 @@
 /* ---- Custom tweaks ---- */
+
+/* Hero heading tweaks */
 header .intro-heading {
   text-transform: none !important;
   line-height: 1.15;
   max-width: 28ch;
 }
-
 @media (max-width:576px){
-  header .intro-heading {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
+  header .intro-heading { font-size: 2rem; line-height: 1.2; }
 }
 
-/* Bigger and more confident subline under hero button */
+/* Bigger, confident subline under hero button */
 .hero-subtext {
   margin-top: 15px;
-  font-size: 2rem;          /* roughly double */
+  font-size: 2rem;
   font-weight: 500;
   color: #fff;
   opacity: 0.95;
   letter-spacing: 0.5px;
   text-transform: none;
 }
+@media (max-width:576px){ .hero-subtext { font-size: 1.4rem; } }
 
-@media (max-width: 576px) {
-  .hero-subtext { font-size: 1.4rem; }
-}
-
-/* Keep default gold ONLY for non-CTA primary buttons in the navbar */
+/* Keep original gold ONLY for non-CTA primary buttons */
 .navbar-nav > li > .btn.btn-primary:not(.btn-cta) {
   background-color: #fed136;
   border-color: #fed136;
@@ -40,154 +35,103 @@ header .intro-heading {
   color: #fff;
 }
 
-/* --------------------------------------------------------- */
-/* UPDATED CTA buttons (hero + navbar): base #e66a00, hover #cc5f00 */
+/* ---------------------------------------------------------
+   CTA buttons (hero + navbar): base/hover colors
+--------------------------------------------------------- */
 .btn.btn-primary.btn-cta {
-  background-color: #e66a00;   /* base */
+  background-color: #e66a00;
   border-color: #e66a00;
   color: #fff;
-  font-weight: 700;             /* bold for “large text” AA */
-  font-size: 18px;              /* large text threshold */
+  font-weight: 700;     /* strong, passes AA as large text */
+  font-size: 18px;      /* keeps hero CTA assertive */
   letter-spacing: 0.3px;
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
-
 .btn.btn-primary.btn-cta:hover,
 .btn.btn-primary.btn-cta:focus {
-  background-color: #cc5f00;   /* deeper, confident hover */
+  background-color: #cc5f00;
   border-color: #cc5f00;
   color: #fff;
   transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  box-shadow: 0 3px 10px rgba(0,0,0,.25);
 }
 
-/* Navbar alignment for CTA (applies only in navbar context) */
-.navbar-nav > li > .btn.btn-primary.btn-cta {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-@media (max-width: 767px) {
-  .navbar-nav > li > .btn.btn-primary.btn-cta {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-/* Make just the brand/title white (both normal + scrolled states) */
-.navbar-default .navbar-brand {
-  color: #ffffff !important;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #e66a00 !important;   /* optional: on-brand hover */
-}
-
-/* When Agency theme adds .navbar-shrink on scroll, keep it white too */
-.navbar-default.navbar-shrink .navbar-brand {
-  color: #ffffff !important;
-}
-.navbar-default.navbar-shrink .navbar-brand:hover,
-.navbar-default.navbar-shrink .navbar-brand:focus {
-  color: #e66a00 !important;
-}
-
-/* --- Problem Section --- */
-
-/* Visually hidden but SEO-visible heading */
-.sr-only {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Main paragraph-style headline (still an H2) */
-#problem .problem-heading {
-  text-transform: none;
-  font-size: 2rem;
-  line-height: 1.35;
-  font-weight: 600;
-  color: #2b2b2b;
-  max-width: 45ch;
-  margin: 0 auto 20px;
-}
-
-/* --- Problem section bridge line styling --- */
-#problem .problem-bridge {
-  font-size: 1.3rem;           /* bump up size for emphasis */
-  line-height: 1.5;
-  max-width: 48ch;             /* keep line length balanced */
-  margin: 20px auto 30px;      /* add breathing room */
-  color: #444;                 /* darker for clarity */
-  font-weight: 500;            /* makes it feel confident */
-  letter-spacing: 0.3px;       /* subtle polish */
-}
-
-@media (max-width: 576px) {
-  #problem .problem-bridge {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-}
-
-#problem .problem-bridge br {
-  margin-bottom: 6px;
-  display: block;
-  content: "";
-}
-
-/* Secondary calm button (problem section + anywhere else) */
-.btn.btn-secondary {
-  background-color: transparent;
-  border: 2px solid #5b8fa9;   /* your blue accent */
-  color: #5b8fa9;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  padding: 12px 26px;          /* smaller than primary for lighter feel */
-  font-size: 0.95rem;          /* a bit lighter than main CTAs */
-  border-radius: 4px;
-  transition: all 0.25s ease;
-}
-
-.btn.btn-secondary:hover,
-.btn.btn-secondary:focus {
-  background-color: #5b8fa9;
-  color: #fff;
-}
-
-/* Optional: give the button a touch more space above/below in the problem section */
-#problem .btn.btn-secondary {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-/* Mobile tweak */
-@media (max-width:576px){
-  .btn.btn-secondary {
-    padding: 10px 22px;
-    font-size: 0.95rem;
-  }
-}
-
-#problem .problem-bridge {
-  margin-bottom: 30px; /* adds nice space before next section */
-}
-
-/* Keep CTA styled and aligned (navbar context) */
+/* Navbar-specific sizing/alignment for CTA */
 .navbar-nav > li > .btn.btn-cta {
-  font-weight: 600;
-  letter-spacing: 0.3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 10px 18px;   /* tidier next to text links */
+  font-size: 1rem;      /* smaller than hero CTA */
 }
-@media (max-width: 767px) {
+@media (max-width:767px){
   .navbar-nav > li > .btn.btn-cta {
     margin: 10px auto;
     display: block;
   }
+}
+
+/* Brand/title in navbar: keep white in both states */
+.navbar-default .navbar-brand { color: #fff !important; }
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus { color: #e66a00 !important; }
+.navbar-default.navbar-shrink .navbar-brand { color: #fff !important; }
+.navbar-default.navbar-shrink .navbar-brand:hover,
+.navbar-default.navbar-shrink .navbar-brand:focus { color: #e66a00 !important; }
+
+/* --- Problem Section --- */
+
+/* Visually hidden but SEO-visible heading */
+.sr-only{
+  position:absolute!important; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; border:0;
+}
+
+/* Paragraph-style H2 headline */
+#problem .problem-heading{
+  text-transform:none;
+  font-size:2rem;
+  line-height:1.35;
+  font-weight:600;
+  color:#2b2b2b;
+  max-width:45ch;
+  margin:0 auto 20px;
+}
+
+/* Bridge line under headline */
+#problem .problem-bridge{
+  font-size:1.3rem;
+  line-height:1.5;
+  max-width:48ch;
+  margin:20px auto 30px;  /* includes bottom spacing to next section */
+  color:#444;
+  font-weight:500;
+  letter-spacing:.3px;
+}
+@media (max-width:576px){
+  #problem .problem-bridge{ font-size:1.1rem; line-height:1.6; }
+}
+#problem .problem-bridge br{
+  margin-bottom:6px; display:block; content:"";
+}
+
+/* Secondary (calm) outline button */
+.btn.btn-secondary{
+  background-color:transparent;
+  border:2px solid #5b8fa9;
+  color:#5b8fa9;
+  font-weight:600;
+  letter-spacing:.3px;
+  padding:12px 26px;
+  font-size:.95rem;
+  border-radius:4px;
+  transition:all .25s ease;
+}
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus{
+  background-color:#5b8fa9; color:#fff;
+}
+#problem .btn.btn-secondary{ margin-top:8px; margin-bottom:8px; }
+@media (max-width:576px){
+  .btn.btn-secondary{ padding:10px 22px; font-size:.95rem; }
 }
 
