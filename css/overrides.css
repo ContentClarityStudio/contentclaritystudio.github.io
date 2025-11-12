@@ -56,23 +56,25 @@ header .intro-heading {
   box-shadow: 0 3px 10px rgba(0,0,0,.25);
 }
 
-/* Navbar-specific sizing/alignment for CTA */
-.navbar-nav > li > .btn.btn-cta {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-left: 20px;   /* 👈 this creates spacing between it and the links */
+/* ---------------- Navbar spacing/alignment ---------------- */
+/* Even spacing between text links (desktop) */
+.navbar-nav > li { margin: 0 12px; }
+.navbar-nav > li:first-child { margin-left: 0; }
+
+/* Extra gap before the CTA; size the button neatly in the bar */
+.navbar-nav > li.nav-cta { margin-left: 20px; }
+.navbar-nav > li.nav-cta > a.btn.btn-cta {
   padding: 10px 18px;
   font-size: 1rem;
+  margin: 8px 0;   /* vertical centering in the bar */
 }
-/* Add consistent horizontal spacing between navbar links */
-.navbar-nav > li {
-  margin-left: 12px;
-  margin-right: 12px;
-}
+
+/* Collapse tweaks (mobile) */
 @media (max-width:767px){
-  .navbar-nav > li > .btn.btn-cta {
-    margin: 10px auto;
+  .navbar-nav > li { margin: 0; }
+  .navbar-nav > li.nav-cta > a.btn.btn-cta {
     display: block;
+    margin: 10px 0;
   }
 }
 
@@ -140,4 +142,5 @@ header .intro-heading {
 @media (max-width:576px){
   .btn.btn-secondary{ padding:10px 22px; font-size:.95rem; }
 }
+
 
