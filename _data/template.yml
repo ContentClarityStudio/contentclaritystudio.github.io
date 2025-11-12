@@ -1,7 +1,7 @@
 # Color settings (hex-codes without the leading hash-tag)
 color:
   primary:  #c7d8e2     # replaces fed136 (was bright yellow)
-  secondary: #90c2df      # replaces fec503 (slightly lighter for hover)
+  secondary: #c7d8e2      # replaces fec503 (slightly lighter for hover)
   secondary-dark: 333
   muted: 777
 
