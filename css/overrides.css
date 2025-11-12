@@ -64,6 +64,11 @@ header .intro-heading {
   padding: 10px 18px;
   font-size: 1rem;
 }
+/* Add consistent horizontal spacing between navbar links */
+.navbar-nav > li {
+  margin-left: 12px;
+  margin-right: 12px;
+}
 @media (max-width:767px){
   .navbar-nav > li > .btn.btn-cta {
     margin: 10px auto;
