@@ -91,3 +91,38 @@ header .intro-heading {
 .navbar-default.navbar-shrink .navbar-brand:focus {
   color: #e66a00 !important;
 }
+
+/* --- Problem Section --- */
+
+/* Visually hidden but SEO-visible heading */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Main paragraph-style headline (still an H2) */
+#problem .problem-heading {
+  text-transform: none;
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: 600;
+  color: #2b2b2b;
+  max-width: 45ch;
+  margin: 0 auto 20px;
+}
+
+/* Supporting bridge line */
+#problem .problem-bridge {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 55ch;
+  margin: 0 auto 22px;
+}
