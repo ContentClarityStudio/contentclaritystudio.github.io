@@ -181,7 +181,7 @@ header .intro-heading {
 .navbar-default .navbar-nav > li.nav-cta > a:focus {
   background-color: #cc5f00 !important;
   color: #fff !important;
-  transform: scale(1.02);               /* expand slightly */
+  transform: scale(1.01);               /* expand slightly */
   box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   text-decoration: none;
 }
