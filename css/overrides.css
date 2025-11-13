@@ -181,3 +181,15 @@ header .intro-heading {
   display: flex;
   align-items: center; /* perfect vertical centering */
 }
+
+/* Make CTA identical height to nav tabs */
+.navbar-nav > li.nav-cta > a.btn.btn-cta {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  line-height: 20px !important;
+  height: auto !important;
+
+  /* Make it behave like a tab */
+  display: inline-block !important;
+  border-radius: 3px !important;
+}
