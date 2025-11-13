@@ -147,3 +147,13 @@ header .intro-heading {
   .btn.btn-secondary{ padding:10px 22px; font-size:.95rem; }
 }
 
+/* FINAL FIX: make navbar CTA fill the li like other nav links */
+.navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
+  display: block !important;      /* make it fill the li vertically */
+  padding-top: 15px !important;   /* match Bootstrap nav link padding */
+  padding-bottom: 15px !important;
+  line-height: 20px !important;   /* same text line height */
+  font-size: 14px !important;
+  margin: 0 !important;
+  border-radius: 3px;
+}
