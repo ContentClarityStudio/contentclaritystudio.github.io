@@ -167,3 +167,14 @@ header .intro-heading {
     font-size: .95rem;
   }
 }
+
+/* Hard lock: make navbar CTA exactly same height as other tabs */
+.navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
+  height: 50px;              /* same as Bootstrap navbar height */
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  display: flex;             /* vertically center text */
+  align-items: center;
+  font-size: 14px !important;
+  line-height: 20px !important;
+}
