@@ -252,3 +252,51 @@ header .intro-heading {
     text-align: left;
   }
 }
+
+/* Tighter, more readable struggle grid */
+#problem .struggle-grid {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/* Reduce the space between the two columns */
+#problem .struggle-grid .col-md-6 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* Larger + more readable titles */
+#problem .struggle-column-title {
+  text-transform: none;
+  font-size: 1.25rem;      /* was 1.1rem — better for older readers */
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Increase body text for lists */
+#problem .struggle-list li {
+  font-size: 1.05rem;      /* was ~0.95rem */
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+/* Slightly larger icons */
+#problem .struggle-icon {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  font-size: 15px;
+}
+
+/* Bring columns closer together on mobile */
+@media (max-width: 767px) {
+  #problem .struggle-grid .col-md-6 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  #problem .struggle-list li {
+    font-size: 1rem;
+  }
+}
