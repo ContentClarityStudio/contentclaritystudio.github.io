@@ -64,13 +64,14 @@ header .intro-heading {
 
 /* Make the navbar CTA the SAME HEIGHT as the tabs */
 .navbar-nav > li.nav-cta > a.btn.btn-cta {
-  /* Tabs in Bootstrap nav are ~50px tall: padding 15/15 + line-height 20 */
-  padding: 15px 18px;     /* match vertical padding to tabs */
-  line-height: 20px;      /* aligns text baseline like tabs */
-  font-size: 14px;        /* same visual scale as nav links */
-  margin: 0;              /* remove vertical margins so heights match exactly */
-  border-radius: 3px;     /* match tab radius */
+  /* Top | Right/Left | Bottom */
+  padding: 14px 18px 16px;
+  line-height: 20px;
+  font-size: 14px;   /* same as nav links */
+  margin: 0;
+  border-radius: 3px;
 }
+
 
 /* Collapse tweaks (mobile) */
 @media (max-width:767px){
