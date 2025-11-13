@@ -184,3 +184,71 @@ header .intro-heading {
     font-size: .95rem;
   }
 }
+
+/* --- Struggle / Transformation grid inside #problem --- */
+
+#problem .struggle-grid {
+  margin-top: 40px;
+}
+
+#problem .struggle-column-title {
+  text-transform: none;
+  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+#problem .struggle-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 32rem;
+  text-align: left;
+}
+
+#problem .struggle-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+/* Circle icons */
+#problem .struggle-icon {
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Failure (left column) styling */
+#problem .struggle-failure .struggle-icon {
+  background-color: #fce7e7;
+  border: 2px solid #e57373;
+  color: #b71c1c;
+}
+
+/* Success (right column) styling */
+#problem .struggle-success .struggle-icon {
+  background-color: #e3f4ec;
+  border: 2px solid #4caf50;
+  color: #1b5e20;
+}
+
+/* Mobile tweaks */
+@media (max-width: 767px) {
+  #problem .struggle-grid {
+    margin-top: 30px;
+  }
+  #problem .struggle-column-title {
+    text-align: left;
+  }
+}
