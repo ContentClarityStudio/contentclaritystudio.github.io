@@ -185,3 +185,18 @@ header .intro-heading {
   box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   text-decoration: none;
 }
+
+/* Fix nav active state so it doesn't use hover color */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+/* Make sure CTA active state also resets properly */
+.navbar-default .navbar-nav > li.nav-cta.active > a {
+  background-color: #e66a00 !important;  /* default CTA colour */
+  color: #fff !important;
+  transform: none !important;            /* stop hover transform from sticking */
+  box-shadow: none !important;
+}
