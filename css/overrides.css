@@ -300,3 +300,41 @@ header .intro-heading {
     font-size: 1rem;
   }
 }
+
+/* =======================================================
+   Struggle section: make text larger + columns closer
+   (robust version that will always win)
+   ======================================================= */
+
+/* Bigger body text inside the struggle section */
+#problem p,
+#problem li {
+  font-size: 1.1rem !important;   /* ≈ 17–18px */
+  line-height: 1.6 !important;
+}
+
+/* Make the column headings a bit larger and bolder */
+#problem h3,
+#problem h4 {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+}
+
+/* Pull the two sides closer together */
+#problem .col-md-6 {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+/* On mobile, don’t over-squish the text */
+@media (max-width: 767px) {
+  #problem .col-md-6 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  #problem p,
+  #problem li {
+    font-size: 1.05rem !important;
+  }
+}
