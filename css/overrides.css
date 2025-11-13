@@ -7,7 +7,10 @@ header .intro-heading {
   max-width: 28ch;
 }
 @media (max-width:576px){
-  header .intro-heading { font-size: 2rem; line-height: 1.2; }
+  header .intro-heading {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
 }
 
 /* Bigger, confident subline under hero button */
@@ -20,7 +23,9 @@ header .intro-heading {
   letter-spacing: 0.5px;
   text-transform: none;
 }
-@media (max-width:576px){ .hero-subtext { font-size: 1.4rem; } }
+@media (max-width:576px){
+  .hero-subtext { font-size: 1.4rem; }
+}
 
 /* Keep original gold ONLY for non-CTA primary buttons */
 .navbar-nav > li > .btn.btn-primary:not(.btn-cta) {
@@ -37,7 +42,6 @@ header .intro-heading {
 
 /* ---------------------------------------------------------
    CTA buttons (hero + navbar): base/hover colors
-   (single, de-duplicated definition)
 --------------------------------------------------------- */
 .btn.btn-primary.btn-cta {
   background-color: #e66a00;
@@ -59,48 +63,68 @@ header .intro-heading {
 /* ---------------- Navbar spacing/alignment ---------------- */
 
 /* Even spacing between text links (desktop) */
-.navbar-nav > li { margin: 0 12px; }
-.navbar-nav > li:first-child { margin-left: 0; }
-
-/* Make the navbar CTA the SAME HEIGHT as the tabs */
-.navbar-nav > li.nav-cta > a.btn.btn-cta {
-  /* Top | Right/Left | Bottom */
-  padding: 14px 18px 16px;
-  line-height: 20px;
-  font-size: 14px;   /* same as nav links */
-  margin: 0;
-  border-radius: 3px;
+.navbar-nav > li {
+  margin: 0 12px;
+}
+.navbar-nav > li:first-child {
+  margin-left: 0;
 }
 
+/* ✅ Make the navbar CTA the SAME HEIGHT as the tabs */
+.navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
+  display: block;              /* behave like normal nav links */
+  padding: 15px 22px;          /* same vertical padding as tabs, a bit wider */
+  line-height: 20px;           /* aligns text baseline */
+  font-size: 14px;             /* same visual size as nav links */
+  margin: 0;                   /* no extra vertical margins */
+  border-radius: 3px;          /* match tab rounding */
+}
 
 /* Collapse tweaks (mobile) */
 @media (max-width:767px){
-  .navbar-nav > li { margin: 0; }
+  .navbar-nav > li {
+    margin: 0;
+  }
   .navbar-nav > li.nav-cta > a.btn.btn-cta {
     display: block;
-    margin: 10px 0;      /* breathing room when stacked */
-    padding: 12px 18px;  /* slightly smaller in the stack */
+    margin: 10px 0;           /* breathing room when stacked */
+    padding: 12px 22px;       /* slightly smaller in the stack */
   }
 }
 
 /* Brand/title in navbar: keep white in both states */
-.navbar-default .navbar-brand { color: #fff !important; }
+.navbar-default .navbar-brand {
+  color: #fff !important;
+}
 .navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus { color: #e66a00 !important; }
-.navbar-default.navbar-shrink .navbar-brand { color: #fff !important; }
+.navbar-default .navbar-brand:focus {
+  color: #e66a00 !important;
+}
+.navbar-default.navbar-shrink .navbar-brand {
+  color: #fff !important;
+}
 .navbar-default.navbar-shrink .navbar-brand:hover,
-.navbar-default.navbar-shrink .navbar-brand:focus { color: #e66a00 !important; }
+.navbar-default.navbar-shrink .navbar-brand:focus {
+  color: #e66a00 !important;
+}
 
 /* --- Problem Section --- */
 
 /* Visually hidden but SEO-visible heading */
-.sr-only{
-  position:absolute!important; width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; border:0;
+.sr-only {
+  position:absolute !important;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(1px,1px,1px,1px);
+  white-space:nowrap;
+  border:0;
 }
 
 /* Paragraph-style H2 headline */
-#problem .problem-heading{
+#problem .problem-heading {
   text-transform:none;
   font-size:2rem;
   line-height:1.35;
@@ -111,7 +135,7 @@ header .intro-heading {
 }
 
 /* Bridge line under headline */
-#problem .problem-bridge{
+#problem .problem-bridge {
   font-size:1.3rem;
   line-height:1.5;
   max-width:48ch;
@@ -121,14 +145,19 @@ header .intro-heading {
   letter-spacing:.3px;
 }
 @media (max-width:576px){
-  #problem .problem-bridge{ font-size:1.1rem; line-height:1.6; }
+  #problem .problem-bridge {
+    font-size:1.1rem;
+    line-height:1.6;
+  }
 }
-#problem .problem-bridge br{
-  margin-bottom:6px; display:block; content:"";
+#problem .problem-bridge br {
+  margin-bottom:6px;
+  display:block;
+  content:"";
 }
 
 /* Secondary (calm) outline button */
-.btn.btn-secondary{
+.btn.btn-secondary {
   background-color:transparent;
   border:2px solid #5b8fa9;
   color:#5b8fa9;
@@ -140,56 +169,17 @@ header .intro-heading {
   transition:all .25s ease;
 }
 .btn.btn-secondary:hover,
-.btn.btn-secondary:focus{
-  background-color:#5b8fa9; color:#fff;
+.btn.btn-secondary:focus {
+  background-color:#5b8fa9;
+  color:#fff;
 }
-#problem .btn.btn-secondary{ margin-top:8px; margin-bottom:8px; }
+#problem .btn.btn-secondary {
+  margin-top:8px;
+  margin-bottom:8px;
+}
 @media (max-width:576px){
-  .btn.btn-secondary{ padding:10px 22px; font-size:.95rem; }
-}
-
-/* --- FINAL OVERRIDE: make navbar CTA exactly same height as tabs --- */
-.navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
-  padding: 15px 18px !important;  /* same vertical padding as tabs */
-  line-height: 20px !important;   /* aligns text baseline */
-  font-size: 14px !important;     /* same visual scale as nav links */
-  margin: 0 !important;           /* no extra vertical margins */
-  border-radius: 3px;             /* match tab radius */
-}
-/* FINAL FIX: make navbar CTA fill the li like other nav links */
-.navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
-  display: block !important;      /* make it fill the li vertically */
-  padding-top: 15px !important;   /* match Bootstrap nav link padding */
-  padding-bottom: 15px !important;
-  line-height: 20px !important;   /* same text line height */
-  font-size: 14px !important;
-  margin: 0 !important;
-  border-radius: 3px;
-}
-
-/* Tiny visual tweak: nudge navbar CTA down so bottoms align with tabs */
-.navbar-nav > li.nav-cta > a.btn.btn-cta {
-  position: relative;
-  top: 1px;   /* try 2px if 1px still looks a hair high */
-}
-
-/* Make CTA full tab height */
-.navbar-nav > li.nav-cta > a.btn.btn-cta {
-  padding: 15px 22px !important; /* same vertical padding as tabs */
-  line-height: 20px !important;  /* aligns text baseline perfectly */
-  border-radius: 3px !important; /* match tab rounding */
-  display: flex;
-  align-items: center; /* perfect vertical centering */
-}
-
-/* Make CTA identical height to nav tabs */
-.navbar-nav > li.nav-cta > a.btn.btn-cta {
-  padding-top: 15px !important;
-  padding-bottom: 15px !important;
-  line-height: 20px !important;
-  height: auto !important;
-
-  /* Make it behave like a tab */
-  display: inline-block !important;
-  border-radius: 3px !important;
+  .btn.btn-secondary {
+    padding:10px 22px;
+    font-size:.95rem;
+  }
 }
