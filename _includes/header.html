@@ -1,56 +1,169 @@
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <!-- Brand + hamburger -->
-    <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-label="Toggle navigation">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand page-scroll" href="#page-top">{{ site.title }}</a>
-    </div>
+/* ---- Custom tweaks ---- */
 
-    <!-- Right-side nav -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="page-scroll" href="#problem">The Struggle</a></li>
-        <li><a class="page-scroll" href="#plan">The Plan</a></li>
+/* Hero heading tweaks */
+header .intro-heading {
+  text-transform: none !important;
+  line-height: 1.15;
+  max-width: 28ch;
+}
+@media (max-width:576px){
+  header .intro-heading { font-size: 2rem; line-height: 1.2; }
+}
 
-        <!-- CTA lives inside the same <ul>; class used for spacing/alignment -->
-        <li class="nav-cta">
-          <a href="#contact" class="page-scroll btn btn-primary btn-cta">
-            Book your audit today
-          </a>
-        </li>
+/* Bigger, confident subline under hero button */
+.hero-subtext {
+  margin-top: 15px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0.95;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+@media (max-width:576px){
+  .hero-subtext { font-size: 1.4rem; }
+}
 
-        <!--
-        <li><a class="page-scroll" href="#portfolio">Portfolio</a></li>
-        <li><a class="page-scroll" href="#about">About</a></li>
-        <li><a class="page-scroll" href="#team">Team</a></li>
-        -->
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- /Navigation -->
+/* Keep original gold ONLY for non-CTA primary buttons */
+.navbar-nav > li > .btn.btn-primary:not(.btn-cta) {
+  background-color: #fed136;
+  border-color: #fed136;
+  color: #fff;
+}
+.navbar-nav > li > .btn.btn-primary:not(.btn-cta):hover,
+.navbar-nav > li > .btn.btn-primary:not(.btn-cta):focus {
+  background-color: #fec503;
+  border-color: #fec503;
+  color: #fff;
+}
 
-<!-- Header -->
-<header>
-  <div class="container">
-    <div class="intro-text">
-      <div class="intro-lead-in">Clarity for your content strategy.</div>
+/* ---------------------------------------------------------
+   CTA buttons (hero + navbar): base/hover colors
+--------------------------------------------------------- */
+.btn.btn-primary.btn-cta {
+  background-color: #e66a00;
+  border-color: #e66a00;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: all .2s ease-in-out;
+}
+.btn.btn-primary.btn-cta:hover,
+.btn.btn-primary.btn-cta:focus {
+  background-color: #cc5f00;
+  border-color: #cc5f00;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0,0,0,.25);
+}
 
-      <div class="intro-heading" style="text-transform:none; line-height:1.15; max-width:28ch;">
-        A simple plan<br>
-        so every post moves your business forward.
-      </div>
+/* ---------------- Navbar spacing/alignment ---------------- */
 
-      <a href="#contact" class="page-scroll btn btn-xl btn-primary btn-cta">
-        Book your audit today
-      </a>
-      <p class="hero-subtext">€100 • Clarity creates confidence.</p>
-    </div>
-  </div>
-</header>
+/* Even spacing between text links (desktop) */
+.navbar-nav > li {
+  margin: 0 12px;
+}
+.navbar-nav > li:first-child {
+  margin-left: 0;
+}
+
+/* Make navbar CTA visually same height as tabs */
+.navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
+  display: block;                 /* fill the li */
+  padding: 13px 22px 19px;        /* extra bottom padding so bottoms line up */
+  line-height: 20px;
+  font-size: 14px;
+  margin: 0;
+  border-radius: 3px;
+}
+
+/* Mobile: stack nicely */
+@media (max-width:767px){
+  .navbar-nav > li { margin: 0; }
+  .navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
+    display: block;
+    padding: 12px 18px;
+    margin: 10px 0;
+  }
+}
+
+/* Brand/title in navbar: keep white in both states */
+.navbar-default .navbar-brand { color: #fff !important; }
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus { color: #e66a00 !important; }
+.navbar-default.navbar-shrink .navbar-brand { color: #fff !important; }
+.navbar-default.navbar-shrink .navbar-brand:hover,
+.navbar-default.navbar-shrink .navbar-brand:focus { color: #e66a00 !important; }
+
+/* --- Problem Section --- */
+
+/* Visually hidden but SEO-visible heading */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Paragraph-style H2 headline */
+#problem .problem-heading {
+  text-transform: none;
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: 600;
+  color: #2b2b2b;
+  max-width: 45ch;
+  margin: 0 auto 20px;
+}
+
+/* Bridge line under headline */
+#problem .problem-bridge {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  max-width: 48ch;
+  margin: 20px auto 30px;
+  color: #444;
+  font-weight: 500;
+  letter-spacing: .3px;
+}
+@media (max-width:576px){
+  #problem .problem-bridge { font-size: 1.1rem; line-height: 1.6; }
+}
+#problem .problem-bridge br {
+  margin-bottom: 6px;
+  display: block;
+  content: "";
+}
+
+/* Secondary (calm) outline button */
+.btn.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #5b8fa9;
+  color: #5b8fa9;
+  font-weight: 600;
+  letter-spacing: .3px;
+  padding: 12px 26px;
+  font-size: .95rem;
+  border-radius: 4px;
+  transition: all .25s ease;
+}
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus {
+  background-color: #5b8fa9;
+  color: #fff;
+}
+#problem .btn.btn-secondary {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+@media (max-width:576px){
+  .btn.btn-secondary {
+    padding: 10px 22px;
+    font-size: .95rem;
+  }
+}
