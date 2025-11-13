@@ -7,7 +7,10 @@ header .intro-heading {
   max-width: 28ch;
 }
 @media (max-width:576px){
-  header .intro-heading { font-size: 2rem; line-height: 1.2; }
+  header .intro-heading {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
 }
 
 /* Bigger, confident subline under hero button */
@@ -24,7 +27,7 @@ header .intro-heading {
   .hero-subtext { font-size: 1.4rem; }
 }
 
-/* Keep original gold ONLY for non-CTA primary buttons */
+/* Keep original gold ONLY for non-CTA primary buttons (if you ever use them) */
 .navbar-nav > li > .btn.btn-primary:not(.btn-cta) {
   background-color: #fed136;
   border-color: #fed136;
@@ -37,14 +40,16 @@ header .intro-heading {
   color: #fff;
 }
 
-/* CTA button for HERO only (uses .btn-cta) */
+/* ---------------------------------------------------------
+   HERO CTA (big orange button in the hero section)
+--------------------------------------------------------- */
 .btn.btn-primary.btn-cta {
   background-color: #e66a00;
   border-color: #e66a00;
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.3px;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .btn.btn-primary.btn-cta:hover,
 .btn.btn-primary.btn-cta:focus {
@@ -66,26 +71,34 @@ header .intro-heading {
 }
 
 /* Navbar CTA: same size as tabs, just orange */
-.navbar-default .navbar-nav > li.nav-cta > a {
-  /* same padding/height as normal nav links – we only change colour */
+.navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
   background-color: #e66a00;
+  border-color: #e66a00;
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.3px;
   border-radius: 3px;
 }
 
-.navbar-default .navbar-nav > li.nav-cta > a:hover,
-.navbar-default .navbar-nav > li.nav-cta > a:focus {
+/* Navbar CTA hover: gentle expand, no jump upwards */
+.navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
+  transition: all 0.2s ease;
+}
+
+.navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta:hover,
+.navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta:focus {
   background-color: #cc5f00;
+  border-color: #cc5f00;
   color: #fff;
+  transform: scale(1.01);           /* smaller, subtle expand */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   text-decoration: none;
 }
 
 /* Mobile: stack nicely */
 @media (max-width:767px){
   .navbar-nav > li { margin: 0; }
-  .navbar-default .navbar-nav > li.nav-cta > a {
+  .navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
     display: block;
     margin: 10px 0;
   }
@@ -170,33 +183,4 @@ header .intro-heading {
     padding: 10px 22px;
     font-size: .95rem;
   }
-}
-
-/* Navbar CTA: gentle expand on hover (no upward movement) */
-.navbar-default .navbar-nav > li.nav-cta > a {
-  transition: all 0.2s ease;   /* smooth animation */
-}
-
-.navbar-default .navbar-nav > li.nav-cta > a:hover,
-.navbar-default .navbar-nav > li.nav-cta > a:focus {
-  background-color: #cc5f00 !important;
-  color: #fff !important;
-  transform: scale(1.01);               /* expand slightly */
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-  text-decoration: none;
-}
-
-/* Fix nav active state so it doesn't use hover color */
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus {
-  background-color: transparent !important;
-  color: #fff !important;
-}
-
-/* Make sure CTA active state also resets properly */
-.navbar-default .navbar-nav > li.nav-cta.active > a {
-  background-color: #e66a00 !important;  /* default CTA colour */
-  color: #fff !important;
-  transform: none !important;            /* stop hover transform from sticking */
-  box-shadow: none !important;
 }
