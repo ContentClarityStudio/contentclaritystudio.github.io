@@ -185,10 +185,3 @@ header .intro-heading {
   box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   text-decoration: none;
 }
-
-
-/* Reset transform so it sits normally when not hovered */
-.navbar-default .navbar-nav > li.nav-cta > a {
-  transition: all 0.2s ease;
-  transform: none;
-}
