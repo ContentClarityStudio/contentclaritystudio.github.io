@@ -310,3 +310,16 @@ header .intro-heading {
   line-height: 1.7 !important;
 }
 
+/* Bring the two columns closer together */
+#problem [class*="col-"] {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+/* On smaller screens, don’t squish it too much */
+@media (max-width: 767px) {
+  #problem [class*="col-"] {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
