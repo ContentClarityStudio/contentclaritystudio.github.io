@@ -7,10 +7,7 @@ header .intro-heading {
   max-width: 28ch;
 }
 @media (max-width:576px){
-  header .intro-heading {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
+  header .intro-heading { font-size: 2rem; line-height: 1.2; }
 }
 
 /* Bigger, confident subline under hero button */
@@ -70,116 +67,103 @@ header .intro-heading {
   margin-left: 0;
 }
 
-/* ✅ Make the navbar CTA the SAME HEIGHT as the tabs */
+/* Make navbar CTA visually same height as tabs */
 .navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
-  display: block;              /* behave like normal nav links */
-  padding: 15px 22px;          /* same vertical padding as tabs, a bit wider */
-  line-height: 20px;           /* aligns text baseline */
-  font-size: 14px;             /* same visual size as nav links */
-  margin: 0;                   /* no extra vertical margins */
-  border-radius: 3px;          /* match tab rounding */
+  display: block;                 /* fill the li */
+  padding: 13px 22px 19px;        /* extra bottom padding so bottoms line up */
+  line-height: 20px;
+  font-size: 14px;
+  margin: 0;
+  border-radius: 3px;
 }
 
-/* Collapse tweaks (mobile) */
+/* Mobile: stack nicely */
 @media (max-width:767px){
-  .navbar-nav > li {
-    margin: 0;
-  }
-  .navbar-nav > li.nav-cta > a.btn.btn-cta {
+  .navbar-nav > li { margin: 0; }
+  .navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
     display: block;
-    margin: 10px 0;           /* breathing room when stacked */
-    padding: 12px 22px;       /* slightly smaller in the stack */
+    padding: 12px 18px;
+    margin: 10px 0;
   }
 }
 
 /* Brand/title in navbar: keep white in both states */
-.navbar-default .navbar-brand {
-  color: #fff !important;
-}
+.navbar-default .navbar-brand { color: #fff !important; }
 .navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #e66a00 !important;
-}
-.navbar-default.navbar-shrink .navbar-brand {
-  color: #fff !important;
-}
+.navbar-default .navbar-brand:focus { color: #e66a00 !important; }
+.navbar-default.navbar-shrink .navbar-brand { color: #fff !important; }
 .navbar-default.navbar-shrink .navbar-brand:hover,
-.navbar-default.navbar-shrink .navbar-brand:focus {
-  color: #e66a00 !important;
-}
+.navbar-default.navbar-shrink .navbar-brand:focus { color: #e66a00 !important; }
 
 /* --- Problem Section --- */
 
 /* Visually hidden but SEO-visible heading */
 .sr-only {
-  position:absolute !important;
-  width:1px;
-  height:1px;
-  padding:0;
-  margin:-1px;
-  overflow:hidden;
-  clip:rect(1px,1px,1px,1px);
-  white-space:nowrap;
-  border:0;
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Paragraph-style H2 headline */
 #problem .problem-heading {
-  text-transform:none;
-  font-size:2rem;
-  line-height:1.35;
-  font-weight:600;
-  color:#2b2b2b;
-  max-width:45ch;
-  margin:0 auto 20px;
+  text-transform: none;
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: 600;
+  color: #2b2b2b;
+  max-width: 45ch;
+  margin: 0 auto 20px;
 }
 
 /* Bridge line under headline */
 #problem .problem-bridge {
-  font-size:1.3rem;
-  line-height:1.5;
-  max-width:48ch;
-  margin:20px auto 30px;
-  color:#444;
-  font-weight:500;
-  letter-spacing:.3px;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  max-width: 48ch;
+  margin: 20px auto 30px;
+  color: #444;
+  font-weight: 500;
+  letter-spacing: .3px;
 }
 @media (max-width:576px){
-  #problem .problem-bridge {
-    font-size:1.1rem;
-    line-height:1.6;
-  }
+  #problem .problem-bridge { font-size: 1.1rem; line-height: 1.6; }
 }
 #problem .problem-bridge br {
-  margin-bottom:6px;
-  display:block;
-  content:"";
+  margin-bottom: 6px;
+  display: block;
+  content: "";
 }
 
 /* Secondary (calm) outline button */
 .btn.btn-secondary {
-  background-color:transparent;
-  border:2px solid #5b8fa9;
-  color:#5b8fa9;
-  font-weight:600;
-  letter-spacing:.3px;
-  padding:12px 26px;
-  font-size:.95rem;
-  border-radius:4px;
-  transition:all .25s ease;
+  background-color: transparent;
+  border: 2px solid #5b8fa9;
+  color: #5b8fa9;
+  font-weight: 600;
+  letter-spacing: .3px;
+  padding: 12px 26px;
+  font-size: .95rem;
+  border-radius: 4px;
+  transition: all .25s ease;
 }
 .btn.btn-secondary:hover,
 .btn.btn-secondary:focus {
-  background-color:#5b8fa9;
-  color:#fff;
+  background-color: #5b8fa9;
+  color: #fff;
 }
 #problem .btn.btn-secondary {
-  margin-top:8px;
-  margin-bottom:8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (max-width:576px){
   .btn.btn-secondary {
-    padding:10px 22px;
-    font-size:.95rem;
+    padding: 10px 22px;
+    font-size: .95rem;
   }
 }
