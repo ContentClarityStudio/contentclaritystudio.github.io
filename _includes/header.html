@@ -3,7 +3,8 @@
   <div class="container">
     <!-- Brand + hamburger -->
     <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-label="Toggle navigation">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-label="Toggle navigation">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -15,17 +16,25 @@
     <!-- Right-side nav -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+
+        <!-- Hidden helpers for scrollspy -->
+        <li class="hidden">
+          <a class="page-scroll" href="#page-top"></a>
+        </li>
+        <li class="hidden">
+          <a class="page-scroll" href="#contact"></a>
+        </li>
+
+        <!-- Visible nav items -->
         <li><a class="page-scroll" href="#problem">The Struggle</a></li>
         <li><a class="page-scroll" href="#plan">The Plan</a></li>
 
-        <!-- CTA lives inside the same <ul>; class used for spacing/alignment -->
+        <!-- CTA in the nav -->
         <li class="nav-cta">
-          <a class="page-scroll" href="#contact">
+          <a href="#contact" class="page-scroll btn btn-primary btn-cta">
             Book your audit today
           </a>
         </li>
-
-
 
         <!--
         <li><a class="page-scroll" href="#portfolio">Portfolio</a></li>
