@@ -172,16 +172,18 @@ header .intro-heading {
   }
 }
 
-/* --- Hover animation for NAVBAR CTA (matches hero CTA, but softer) --- */
+/* Navbar CTA: match hero CTA hover behaviour */
+.navbar-default .navbar-nav > li.nav-cta > a {
+  transition: all 0.2s ease;   /* smooth animation */
+}
+
 .navbar-default .navbar-nav > li.nav-cta > a:hover,
 .navbar-default .navbar-nav > li.nav-cta > a:focus {
   background-color: #cc5f00 !important;
   color: #fff !important;
-
-  /* smooth micro-interaction */
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  transition: all 0.2s ease;
+  transform: translateY(-1px);           /* same as hero CTA */
+  box-shadow: 0 3px 10px rgba(0,0,0,.25);/* same shadow as hero CTA */
+  text-decoration: none;
 }
 
 /* Reset transform so it sits normally when not hovered */
