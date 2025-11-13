@@ -37,7 +37,7 @@ header .intro-heading {
   color: #fff;
 }
 
-/* CTA button for HERO only (uses .btn-cta) */
+/* HERO CTA */
 .btn.btn-primary.btn-cta {
   background-color: #e66a00;
   border-color: #e66a00;
@@ -51,11 +51,11 @@ header .intro-heading {
   background-color: #cc5f00;
   border-color: #cc5f00;
   color: #fff;
-  transform: translateY(-1px);
+  transform: scale(1.04); /* gentle expand */
   box-shadow: 0 3px 10px rgba(0,0,0,.25);
 }
 
-/* ---------------- Navbar spacing/alignment ---------------- */
+/* ---------------- Navbar spacing & CTA sizing --------------- */
 
 /* Even spacing between text links (desktop) */
 .navbar-nav > li {
@@ -65,33 +65,41 @@ header .intro-heading {
   margin-left: 0;
 }
 
-/* Navbar CTA: same size as tabs, just orange */
+/* Navbar CTA (normal state) — match height of nav links */
 .navbar-default .navbar-nav > li.nav-cta > a {
-  /* same padding/height as normal nav links – we only change colour */
+  display: block;
+  padding: 15px 22px; /* EXACT same vertical padding as normal nav links */
+  font-size: 14px;    /* same text size as nav links */
+  line-height: 20px;
+  border-radius: 3px;
   background-color: #e66a00;
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.3px;
-  border-radius: 3px;
+  transition: all 0.2s ease;
 }
 
+/* Navbar CTA hover — gentle expand */
 .navbar-default .navbar-nav > li.nav-cta > a:hover,
 .navbar-default .navbar-nav > li.nav-cta > a:focus {
-  background-color: #cc5f00;
-  color: #fff;
+  background-color: #cc5f00 !important;
+  color: #fff !important;
+  transform: scale(1.04);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   text-decoration: none;
 }
 
-/* Mobile: stack nicely */
+/* Mobile stacking */
 @media (max-width:767px){
   .navbar-nav > li { margin: 0; }
   .navbar-default .navbar-nav > li.nav-cta > a {
     display: block;
     margin: 10px 0;
+    padding: 12px 18px;
   }
 }
 
-/* Brand/title in navbar: keep white in both states */
+/* Brand/title in navbar: keep white always */
 .navbar-default .navbar-brand { color: #fff !important; }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus { color: #e66a00 !important; }
@@ -99,7 +107,7 @@ header .intro-heading {
 .navbar-default.navbar-shrink .navbar-brand:hover,
 .navbar-default.navbar-shrink .navbar-brand:focus { color: #e66a00 !important; }
 
-/* --- Problem Section --- */
+/* ----------- Problem Section ----------- */
 
 /* Visually hidden but SEO-visible heading */
 .sr-only {
@@ -125,7 +133,7 @@ header .intro-heading {
   margin: 0 auto 20px;
 }
 
-/* Bridge line under headline */
+/* Bridge line */
 #problem .problem-bridge {
   font-size: 1.3rem;
   line-height: 1.5;
@@ -144,7 +152,7 @@ header .intro-heading {
   content: "";
 }
 
-/* Secondary (calm) outline button */
+/* Secondary calm button */
 .btn.btn-secondary {
   background-color: transparent;
   border: 2px solid #5b8fa9;
@@ -170,18 +178,4 @@ header .intro-heading {
     padding: 10px 22px;
     font-size: .95rem;
   }
-}
-
-/* Navbar CTA: gentle expand on hover (no upward movement) */
-.navbar-default .navbar-nav > li.nav-cta > a {
-  transition: all 0.2s ease;   /* smooth animation */
-}
-
-.navbar-default .navbar-nav > li.nav-cta > a:hover,
-.navbar-default .navbar-nav > li.nav-cta > a:focus {
-  background-color: #cc5f00 !important;
-  color: #fff !important;
-  transform: scale(1.04);               /* expand slightly */
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-  text-decoration: none;
 }
