@@ -166,3 +166,9 @@ header .intro-heading {
   margin: 0 !important;
   border-radius: 3px;
 }
+
+/* Tiny visual tweak: nudge navbar CTA down so bottoms align with tabs */
+.navbar-nav > li.nav-cta > a.btn.btn-cta {
+  position: relative;
+  top: 1px;   /* try 2px if 1px still looks a hair high */
+}
