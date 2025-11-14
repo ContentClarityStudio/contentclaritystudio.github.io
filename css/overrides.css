@@ -323,3 +323,10 @@ header .intro-heading {
     padding-right: 15px !important;
   }
 }
+
+/* Global body copy bump – nicer for older eyes */
+body p,
+body li {
+  font-size: 1.05rem !important;   /* ~16.8px */
+  line-height: 1.8 !important;
+}
