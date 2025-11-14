@@ -392,3 +392,12 @@ header .intro-heading {
   font-size: 1.05rem;   /* bigger than body copy */
   line-height: 1.8;     /* extra breathing room */
 }
+
+
+/* === 3-STEP PLAN ICON SIZE === */
+
+/* Covers both cases: if the section id is #plan or still #services */
+#plan .fa-stack,
+#services .fa-stack {
+  font-size: 2.6em;   /* bump this up/down if you want */
+}
