@@ -40,9 +40,7 @@ header .intro-heading {
   color: #fff;
 }
 
-/* ---------------------------------------------------------
-   HERO CTA (big orange button in the hero section)
---------------------------------------------------------- */
+/* HERO CTA (big orange button in the hero section) */
 .btn.btn-primary.btn-cta {
   background-color: #e66a00;
   border-color: #e66a00;
@@ -60,9 +58,7 @@ header .intro-heading {
   box-shadow: 0 3px 10px rgba(0,0,0,.25);
 }
 
-/* ---------------- Navbar spacing/alignment ---------------- */
-
-/* Even spacing between text links (desktop) */
+/* Navbar spacing/alignment */
 .navbar-nav > li {
   margin: 0 12px;
 }
@@ -78,24 +74,21 @@ header .intro-heading {
   font-weight: 700;
   letter-spacing: 0.3px;
   border-radius: 3px;
-}
-
-/* Navbar CTA hover: gentle expand, no jump upwards */
-.navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
   transition: all 0.2s ease;
 }
 
+/* Navbar CTA hover: tiny expand, no jump upwards */
 .navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta:hover,
 .navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta:focus {
   background-color: #cc5f00;
   border-color: #cc5f00;
   color: #fff;
-  transform: scale(1.01);           /* smaller, subtle expand */
+  transform: scale(1.01);
   box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   text-decoration: none;
 }
 
-/* Mobile: stack nicely */
+/* Mobile nav CTA layout */
 @media (max-width:767px){
   .navbar-nav > li { margin: 0; }
   .navbar-default .navbar-nav > li.nav-cta > a.btn.btn-cta {
@@ -112,7 +105,8 @@ header .intro-heading {
 .navbar-default.navbar-shrink .navbar-brand:hover,
 .navbar-default.navbar-shrink .navbar-brand:focus { color: #e66a00 !important; }
 
-/* --- Problem Section --- */
+
+/* --- Problem Section (Struggle + transformation) --- */
 
 /* Visually hidden but SEO-visible heading */
 .sr-only {
@@ -149,12 +143,10 @@ header .intro-heading {
   letter-spacing: .3px;
 }
 @media (max-width:576px){
-  #problem .problem-bridge { font-size: 1.1rem; line-height: 1.6; }
-}
-#problem .problem-bridge br {
-  margin-bottom: 6px;
-  display: block;
-  content: "";
+  #problem .problem-bridge {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
 }
 
 /* Secondary (calm) outline button */
@@ -185,300 +177,90 @@ header .intro-heading {
   }
 }
 
-/* --- Struggle / Transformation grid inside #problem --- */
+/* === Struggle grid (X vs ✓ columns) === */
 
 #problem .struggle-grid {
-  margin-top: 40px;
+  max-width: 960px;
+  margin: 40px auto 10px;
+  text-align: left;
 }
 
 #problem .struggle-column-title {
-  text-transform: none;
-  font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.15rem !important;
   font-weight: 600;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+  color: #222;
 }
 
+/* lists */
 #problem .struggle-list {
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin: 0 auto;
-  max-width: 32rem;
-  text-align: left;
 }
 
 #problem .struggle-list li {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  margin-bottom: 10px;
-  font-size: 0.98rem;
-  line-height: 1.5;
+  margin-bottom: 12px;
 }
 
-/* Circle icons */
+/* actual bullet sentences – make these bigger for older eyes */
+#problem .struggle-list li span:last-child {
+  font-size: 1.1rem !important;   /* ~17–18px */
+  line-height: 1.7 !important;
+}
+
+/* icon circles */
 #problem .struggle-icon {
   flex: 0 0 26px;
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-/* Failure (left column) styling */
-#problem .struggle-failure .struggle-icon {
-  background-color: #fce7e7;
-  border: 2px solid #e57373;
-  color: #b71c1c;
-}
-
-/* Success (right column) styling */
-#problem .struggle-success .struggle-icon {
-  background-color: #e3f4ec;
-  border: 2px solid #4caf50;
-  color: #1b5e20;
-}
-
-/* Mobile tweaks */
-@media (max-width: 767px) {
-  #problem .struggle-grid {
-    margin-top: 30px;
-  }
-  #problem .struggle-column-title {
-    text-align: left;
-  }
-}
-
-/* Tighter, more readable struggle grid */
-#problem .struggle-grid {
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
-
-/* Reduce the space between the two columns */
-#problem .struggle-grid .col-md-6 {
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-/* Larger + more readable titles */
-#problem .struggle-column-title {
-  text-transform: none;
-  font-size: 1.25rem;      /* was 1.1rem — better for older readers */
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-/* Increase body text for lists */
-#problem .struggle-list li {
-  font-size: 1.05rem;      /* was ~0.95rem */
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-
-/* Slightly larger icons */
-#problem .struggle-icon {
-  flex: 0 0 28px;
-  width: 28px;
-  height: 28px;
-  font-size: 15px;
-}
-
-/* Bring columns closer together on mobile */
-@media (max-width: 767px) {
-  #problem .struggle-grid .col-md-6 {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  #problem .struggle-list li {
-    font-size: 1rem;
-  }
-}
-
-/* === Struggle section: bigger, easier-to-read text === */
-
-#problem p,
-#problem li,
-#problem span {
-  font-size: 1.12rem !important;   /* ~18px, nicer for older eyes */
-  line-height: 1.7 !important;
-}
-
-/* Bring the two columns closer together */
-#problem [class*="col-"] {
-  padding-left: 18px !important;
-  padding-right: 18px !important;
-}
-
-/* On smaller screens, don’t squish it too much */
-@media (max-width: 767px) {
-  #problem [class*="col-"] {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-}
-
-/* Slightly reduce horizontal gutter on 2-column layouts */
-.col-md-6,
-.col-sm-6 {
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-}
-
-/* --- Struggle contrast bullets: bigger + easier to read --- */
-
-/* Headings above each column */
-#problem .struggle-title {
-  font-size: 1.2rem;        /* bigger than default */
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-/* Bullet text in both columns */
-#problem .struggle-list li {
-  font-size: 1.05rem;       /* gently larger than body text */
-  line-height: 1.8;         /* airy for older eyes */
-}
-
-/* Tighten the gap between the two columns a bit */
-#problem .struggle-row .col-md-6,
-#problem .struggle-row .col-sm-6 {
-  padding-left: 20px;
-  padding-right: 20px;
-  /* centers the two-column block a little more */
-}
-
-
-/* --- Struggle (problem) bullets: easier to read --- */
-
-/* Column headings: "Without clarity" / "With a clear content strategy" */
-#problem h4 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-/* Bullet text in both columns (Font Awesome list) */
-#problem .fa-ul li {
-  font-size: 1.05rem;   /* a touch bigger than default body text */
-  line-height: 1.8;     /* more breathing room for older eyes */
-}
-
-
-/* --- Plan section icons: make the circles + icons bigger --- */
-
-#plan .fa-stack {
-  font-size: 2.4em;   /* was effectively smaller after the global reset */
-}
-
-
-/* === STRUGGLE SECTION TYPOGRAPHY === */
-
-/* Column headings: "Without clarity" / "With a clear content strategy" */
-#problem h4 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-/* Make ALL bullet text in the struggle section easier to read */
-#problem ul li {
-  font-size: 1.05rem;   /* bigger than body copy */
-  line-height: 1.8;     /* extra breathing room */
-}
-
-
-/* === 3-STEP PLAN ICON SIZE === */
-
-/* Covers both cases: if the section id is #plan or still #services */
-#plan .fa-stack,
-#services .fa-stack {
-  font-size: 2.6em;   /* bump this up/down if you want */
-}
-
-
-/* === Struggle section: spacing + bigger, readable text === */
-
-#problem .struggle-grid {
-  max-width: 980px;          /* pulls the two columns closer together */
-  margin: 35px auto 10px;
-  text-align: left;          /* bullets read more naturally */
-}
-
-#problem .struggle-column-title {
-  font-size: 1.05rem;        /* a bit larger than body text */
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-#problem .struggle-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#problem .struggle-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 10px;
-  font-size: 1rem;           /* ~16px on most browsers */
-  line-height: 1.6;          /* easier for older eyes */
-}
-
-/* Circle icons for X / ✓ */
-#problem .struggle-icon {
-  flex: 0 0 24px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 }
 
-/* Red “failure” side */
+/* failure (red X) */
 #problem .struggle-failure .struggle-icon {
   border: 2px solid #d96b6b;
   color: #d96b6b;
 }
 
-/* Green “success” side */
+/* success (green ✓) */
 #problem .struggle-success .struggle-icon {
   border: 2px solid #4d9b6b;
   color: #4d9b6b;
 }
 
-/* Mobile: add breathing room between the two columns when stacked */
+/* mobile spacing between the two columns */
 @media (max-width: 767px) {
   #problem .struggle-grid {
     max-width: 100%;
   }
   #problem .struggle-grid .col-sm-6 {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 }
 
-/* === 3-Step Plan icons: bump size back up === */
+/* --- 3-Step Plan Section --- */
 
+/* bump icon size back up and lock it in */
 #plan .fa-stack.fa-4x {
-  font-size: 3.2rem;   /* bigger icons without touching anything else */
+  font-size: 3.6rem !important;
 }
 
-/* Optional: slightly larger headings + copy in the plan if you want */
+/* slightly larger step headings */
 #plan .service-heading {
-  font-size: 1.05rem;
+  font-size: 1.1rem !important;
 }
 
+/* bigger, more readable body copy under each step */
 #plan .text-muted {
-  font-size: 0.98rem;
-  line-height: 1.7;
+  font-size: 1.02rem !important;
+  line-height: 1.8 !important;
 }
