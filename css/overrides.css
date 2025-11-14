@@ -376,3 +376,19 @@ header .intro-heading {
 #plan .fa-stack {
   font-size: 2.4em;   /* was effectively smaller after the global reset */
 }
+
+
+/* === STRUGGLE SECTION TYPOGRAPHY === */
+
+/* Column headings: "Without clarity" / "With a clear content strategy" */
+#problem h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Make ALL bullet text in the struggle section easier to read */
+#problem ul li {
+  font-size: 1.05rem;   /* bigger than body copy */
+  line-height: 1.8;     /* extra breathing room */
+}
