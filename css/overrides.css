@@ -401,3 +401,84 @@ header .intro-heading {
 #services .fa-stack {
   font-size: 2.6em;   /* bump this up/down if you want */
 }
+
+
+/* === Struggle section: spacing + bigger, readable text === */
+
+#problem .struggle-grid {
+  max-width: 980px;          /* pulls the two columns closer together */
+  margin: 35px auto 10px;
+  text-align: left;          /* bullets read more naturally */
+}
+
+#problem .struggle-column-title {
+  font-size: 1.05rem;        /* a bit larger than body text */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#problem .struggle-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#problem .struggle-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;           /* ~16px on most browsers */
+  line-height: 1.6;          /* easier for older eyes */
+}
+
+/* Circle icons for X / ✓ */
+#problem .struggle-icon {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Red “failure” side */
+#problem .struggle-failure .struggle-icon {
+  border: 2px solid #d96b6b;
+  color: #d96b6b;
+}
+
+/* Green “success” side */
+#problem .struggle-success .struggle-icon {
+  border: 2px solid #4d9b6b;
+  color: #4d9b6b;
+}
+
+/* Mobile: add breathing room between the two columns when stacked */
+@media (max-width: 767px) {
+  #problem .struggle-grid {
+    max-width: 100%;
+  }
+  #problem .struggle-grid .col-sm-6 {
+    margin-bottom: 20px;
+  }
+}
+
+/* === 3-Step Plan icons: bump size back up === */
+
+#plan .fa-stack.fa-4x {
+  font-size: 3.2rem;   /* bigger icons without touching anything else */
+}
+
+/* Optional: slightly larger headings + copy in the plan if you want */
+#plan .service-heading {
+  font-size: 1.05rem;
+}
+
+#plan .text-muted {
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
