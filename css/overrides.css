@@ -330,3 +330,10 @@ body li {
   font-size: 1.05rem !important;   /* ~16.8px */
   line-height: 1.8 !important;
 }
+
+/* Slightly reduce horizontal gutter on 2-column layouts */
+.col-md-6,
+.col-sm-6 {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
