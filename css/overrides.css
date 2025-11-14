@@ -353,3 +353,19 @@ header .intro-heading {
   padding-right: 20px;
   /* centers the two-column block a little more */
 }
+
+
+/* --- Struggle (problem) bullets: easier to read --- */
+
+/* Column headings: "Without clarity" / "With a clear content strategy" */
+#problem h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Bullet text in both columns (Font Awesome list) */
+#problem .fa-ul li {
+  font-size: 1.05rem;   /* a touch bigger than default body text */
+  line-height: 1.8;     /* more breathing room for older eyes */
+}
