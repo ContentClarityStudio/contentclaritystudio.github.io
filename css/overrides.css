@@ -324,16 +324,32 @@ header .intro-heading {
   }
 }
 
-/* Global body copy bump – nicer for older eyes */
-body p,
-body li {
-  font-size: 1.05rem !important;   /* ~16.8px */
-  line-height: 1.8 !important;
-}
-
 /* Slightly reduce horizontal gutter on 2-column layouts */
 .col-md-6,
 .col-sm-6 {
   padding-left: 20px !important;
   padding-right: 20px !important;
+}
+
+/* --- Struggle contrast bullets: bigger + easier to read --- */
+
+/* Headings above each column */
+#problem .struggle-title {
+  font-size: 1.2rem;        /* bigger than default */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Bullet text in both columns */
+#problem .struggle-list li {
+  font-size: 1.05rem;       /* gently larger than body text */
+  line-height: 1.8;         /* airy for older eyes */
+}
+
+/* Tighten the gap between the two columns a bit */
+#problem .struggle-row .col-md-6,
+#problem .struggle-row .col-sm-6 {
+  padding-left: 20px;
+  padding-right: 20px;
+  /* centers the two-column block a little more */
 }
